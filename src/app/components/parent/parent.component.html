@@ -1,0 +1,16 @@
+<div class="card mx-auto w-50 text-center">
+    <div class="card-body">
+        <h1 class="card-title">Parent Component</h1>
+        <h2>{{ counter }}</h2>
+        <div class="row">
+            <div class="col">
+                <button (click)="increment()" class="btn btn-primary w-100">Sumar</button>
+            </div>
+            <div class="col">
+                <button (click)="decrement()" class="btn btn-danger w-100">Restar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<app-child [counter]="counter" (updateCounter)="counter = $event" (resetCounter)="counter = 0"></app-child>

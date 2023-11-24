@@ -1,0 +1,16 @@
+<div class="card mx-auto w-50 text-center">
+    <div class="card-body">
+        <h1 class="card-title">Child Component</h1>
+        <h3>{{ counter }}</h3>
+        <div class="row">
+            <div class="col">
+                <button (click)="multiplicar()" class="btn btn-primary w-100">Multiplicar</button>
+            </div>
+            <div class="col">
+                <button (click)="dividir()" class="btn btn-danger w-100">Dividir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<app-grandson [counter]="counter" (resetCounter)="reset()"></app-grandson>
